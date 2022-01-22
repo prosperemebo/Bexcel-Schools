@@ -1,0 +1,106 @@
+.feature-section {
+  padding: 15rem 10vw 7rem 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    flex: 1;
+    margin-right: 4rem;
+
+    h2 {
+      line-height: 5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .paragraph {
+      line-height: 1.8;
+    }
+
+    .cta {
+      margin-top: 2rem;
+
+      .link {
+        padding: 1rem 0.5rem;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        display: block;
+        font-weight: 500;
+        color: $color-secondary;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba($color-yellow, 0.5);
+        }
+      }
+
+      & li {
+        border-top: 4px solid $color-yellow;
+
+        &:not(:first-child) {
+          border-bottom: 4px solid $color-yellow;
+        }
+      }
+    }
+  }
+
+  .composition {
+    flex: 1;
+    height: 46rem;
+    width: 100%;
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0px 4px 8px 1px rgba($color-accent, 0.1);
+      border-radius: 5px 100px;
+    }
+
+    .backdrop {
+      background-color: $color-yellow;
+      height: 90%;
+      width: 90%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 60%;
+      left: 60%;
+    }
+  }
+
+  &--right {
+    .content {
+      margin-left: 5rem;
+    }
+
+    .composition {
+      flex: 1;
+      height: 46rem;
+      width: 100%;
+      position: relative;
+
+      img {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 0px 4px 8px 1px rgba($color-accent, 0.1);
+        border-radius: 5px 100px;
+      }
+
+      .backdrop {
+        background-color: $color-yellow;
+        height: 90%;
+        width: 90%;
+        transform: translate(50%, -50%);
+        position: absolute;
+        top: 60%;
+        left: -40%;
+      }
+    }
+  }
+}

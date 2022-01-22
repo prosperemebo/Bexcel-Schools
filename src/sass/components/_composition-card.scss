@@ -1,0 +1,19 @@
+.composition {
+  &--cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  &--card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-purple, 0.1);
+    padding: 6rem 3.5rem 5rem;
+  }
+}
