@@ -34,8 +34,15 @@
   }
 
   &--outline {
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: transparent;
+    border: 2px solid $color-primary !important;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-accent;
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-purple, 0.2);
+    }
   }
 }
 
@@ -44,9 +51,10 @@
   &:visited {
     font-size: $default-font-size;
     color: $color-primary;
+    text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 3px solid $color-accent;
     padding: 3px;
     transition: all 0.2s;
   }

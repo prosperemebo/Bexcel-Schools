@@ -28,27 +28,7 @@ body {
   }
 
   &--big {
-    & .heading-secondary--sub {
-      font-weight: 400;
-      font-size: 2.5rem;
-
-      @include respond(tab-port) {
-        font-size: $default-font-size;
-      }
-    }
-
-    & .heading-secondary--main {
-      font-weight: 500;
-      font-size: 5rem;
-
-      @include respond(tab-port) {
-        font-size: 3rem;
-      }
-
-      @include respond(phone) {
-        font-size: 3rem;
-      }
-    }
+    font-size: 6rem;
   }
 }
 
@@ -70,6 +50,10 @@ body {
     font-family: $primary-font;
     font-weight: 500;
   }
+}
+
+.white-text {
+  color: $color-primary;
 }
 
 .paragraph {

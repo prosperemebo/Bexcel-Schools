@@ -1,0 +1,72 @@
+.footer {
+  padding: 5rem 10vw 3rem 10vw;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(64, 43, 115, 0.3),
+      rgba(64, 43, 115, 0.3)
+    ),
+    url('/images/bg-dark.png');
+  color: $color-primary;
+
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.3rem;
+      align-items: flex-end;
+    }
+  }
+
+  .foot {
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 8rem;
+      }
+    }
+
+    .body {
+      .links {
+        display: flex;
+        justify-content: space-between;
+
+        .link-body {
+          .tag {
+            font-size: 1.8rem;
+          }
+
+          .links {
+            display: flex;
+            flex-direction: column;
+
+            li {
+              font-size: $default-font-size;
+
+              a {
+                color: $color-primary;
+              }
+            }
+          }
+        }
+      }
+
+      .credit {
+        text-align: center;
+
+        .paragraph {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
