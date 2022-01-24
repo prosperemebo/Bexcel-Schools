@@ -1,5 +1,6 @@
 .footer {
-  padding: 5rem 10vw 3rem 10vw;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(
@@ -15,16 +16,36 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 3rem;
+    }
+
+    .text-group {
+      flex: 1;
+    }
+
     .actions {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      flex: 1;
       gap: 1.3rem;
       align-items: flex-end;
+
+      @include respond(phone) {
+        align-items: stretch;
+        text-align: center;
+      }
     }
   }
 
   .foot {
+    @include respond(phone) {
+      margin-top: 10rem;
+    }
+
     .head {
       display: flex;
       align-items: center;
@@ -40,9 +61,21 @@
         display: flex;
         justify-content: space-between;
 
+        @include respond(tab-port) {
+          flex-direction: column;
+          align-items: stretch;
+
+          margin-bottom: 3rem;
+        }
+
         .link-body {
           .tag {
-            font-size: 1.8rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+
+            @include respond(tab-port) {
+              margin-bottom: 0.1rem;
+            }
           }
 
           .links {

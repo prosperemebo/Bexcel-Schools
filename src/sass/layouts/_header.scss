@@ -3,12 +3,29 @@
   padding-top: 5rem;
   position: relative;
 
+  @include respond(tab-port) {
+    height: 60vh;
+  }
+
   .textbox {
     position: absolute;
     top: 50%;
     left: 10vw;
     transform: translateY(-50%);
     z-index: 2;
+
+    @include respond(tab-port) {
+      left: 5vw;
+    }
+
+    @include respond(phone) {
+      top: 55%;
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   .swiper {

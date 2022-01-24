@@ -1,12 +1,23 @@
 .feature-section {
-  padding: 15rem 10vw 7rem 10vw;
+  padding-top: 15rem;
+  padding-bottom: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  @include respond(phone) {
+    flex-direction: column;
+    padding-bottom: 3rem;
+    padding-top: 10rem;
+  }
+
   .content {
     flex: 1;
     margin-right: 4rem;
+
+    @include respond(phone) {
+      order: 2;
+    }
 
     h2 {
       line-height: 5rem;
@@ -50,6 +61,15 @@
     width: 100%;
     position: relative;
 
+    @include respond(tab-port) {
+      flex: 1;
+    }
+
+    @include respond(phone) {
+      order: 1;
+      margin-bottom: 7rem;
+    }
+
     img {
       position: relative;
       z-index: 1;
@@ -58,6 +78,10 @@
       object-fit: cover;
       box-shadow: 0px 4px 8px 1px rgba($color-accent, 0.1);
       border-radius: 5px 100px;
+
+      @include respond(phone) {
+        height: 4m0rem;
+      }
     }
 
     .backdrop {
@@ -74,6 +98,11 @@
   &--right {
     .content {
       margin-left: 5rem;
+      margin-right: 0;
+
+      @include respond(phone) {
+        margin-left: 0;
+      }
     }
 
     .composition {

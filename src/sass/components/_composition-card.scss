@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     gap: 2.5rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &--card {
