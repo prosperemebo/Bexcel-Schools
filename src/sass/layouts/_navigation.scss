@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 
-    a {
+    .nav-item {
       font-size: 1.4rem;
       text-transform: uppercase;
       font-weight: 500;
@@ -66,19 +66,8 @@
     top: 1rem;
     right: 3rem;
     z-index: 2000;
-    // transform: translateX(7px);
     text-align: center;
     cursor: pointer;
-
-    // @include respond(tab-port) {
-    //   top: 4rem;
-    //   right: 4rem;
-    // }
-
-    // @include respond(phone) {
-    //   top: 3rem;
-    //   right: 3rem;
-    // }
   }
 
   &__logo {
@@ -118,42 +107,14 @@
     list-style: none;
     text-align: center;
     width: 100%;
-  }
 
-  &__item {
-    margin: 1rem;
-  }
-
-  &__link {
-    &:link,
-    &:visited {
+    .nav-item {
+      font-size: 2.5rem;
       display: inline-block;
-      font-size: 3rem;
-      font-weight: 300;
-      padding: 1rem 2rem;
-      color: $color-white;
-      text-decoration: none;
       text-transform: uppercase;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-white 50%
-      );
-      background-size: 220%;
-      transition: all 0.4s;
-
-      span {
-        margin-right: 1.5rem;
-        display: inline-block;
-      }
-    }
-
-    &:hover,
-    &:active {
-      background-position: 100%;
-      color: $color-primary;
-      transform: translateX(1rem);
+      font-weight: 500;
+      color: $color-secondary;
+      margin: 2rem 0rem;
     }
   }
 
